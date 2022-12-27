@@ -1,2 +1,2 @@
-require("aria.remap")
 require("aria.set")
+require("aria.remap")

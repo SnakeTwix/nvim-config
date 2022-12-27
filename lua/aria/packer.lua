@@ -51,4 +51,23 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+
+    use({
+        "rose-pine/neovim",
+        as = "rose-pine",
+    })
+
+    use({
+        "aurum77/live-server.nvim",
+        run = function()
+            require "live_server.util".install()
+        end,
+        cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+    })
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use 'simrat39/rust-tools.nvim'
 end)

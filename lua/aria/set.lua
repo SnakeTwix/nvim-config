@@ -33,4 +33,7 @@ o.updatetime = 50
 
 o.colorcolumn = "80"
 
+o.foldmethod = "syntax"
+
 vim.g.mapleader = " "
+
